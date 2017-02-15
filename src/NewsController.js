@@ -1,5 +1,5 @@
 window.onload = function() {
-    console.log("viewController")
     var newsApp = new NewsApp();
-    newsApp.getNews(newsApp.displayNews.bind(newsApp))
+    var displayNews = new DisplayNews()
+    newsApp.getNews(displayNews.newsHeadlines.bind(newsApp))
 }
