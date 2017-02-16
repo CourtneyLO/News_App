@@ -10,8 +10,7 @@ NewsSummary.prototype.getSummary = function(articleHeading, articleURL) {
     this.displaySummary = new DisplaySummary();
     if(this.readyState == 4 && this.status == 200){
        this.mySummary = JSON.parse(this.responseText)
-       console.log(this.mySummary.sentences[0])
-       var summary = this.mySummary.sentences[0] + this.mySummary.sentences[1] 
+       var summary = this.mySummary.sentences[0] + this.mySummary.sentences[1]
        this.displaySummary.showSummary(articleHeading, summary)
     }
   }

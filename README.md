@@ -7,7 +7,7 @@ A single page app that provides summaries and full length articles of the curren
 ## Instructions
 
 - $ git clone https://github.com/CourtneyLO/News_App
-
+- $ open index.html
 
 ## Run Tests
 
