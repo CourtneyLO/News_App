@@ -21,12 +21,13 @@ function DisplayNews() {
     article.innerHTML = this.xhr.myText.response.results[newsArticleId].fields.bodyText
   }
 
-  DisplayNews.prototype.myNewsSummary = function() {
+  DisplayNews.prototype.getNewsSummary = function() {
     this.newsSummary = new NewsSummary()
-    var newsArticleId = window.location.hash.split("/")[1];
+    var newsArticleId = window.location.hash.split("/")[1] - 1;
     var articleURL = this.xhr.myText.response.results[newsArticleId].webUrl
+    console.log(this.xhr.myText.response.results[newsArticleId].webUrl)
     return this.newsSummary.getSummary(articleURL)
-  
+
     // var summary = getElementById("summary");
     // summary.innerHTML =
   }
