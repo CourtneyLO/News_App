@@ -25,5 +25,6 @@ DisplayNews.prototype.getNewsSummary = function() {
   var articleURL = this.xhr.myText.response.results[newsArticleId].webUrl
   var articleHeading = this.xhr.myText.response.results[newsArticleId].webTitle
   var articleImage = this.xhr.myText.response.results[newsArticleId].fields.thumbnail
+  console.log(this.xhr.myText.response.results)
   return this.newsSummary.getSummary(articleHeading, articleURL, articleImage)
 }
